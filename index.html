@@ -1,0 +1,95 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Bao Bun House Restaurant</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+<div id="game-container">
+    <header>
+        <div class="title-box">
+            <h1>Bao House</h1>
+            <p>Asian Culinary Express</p>
+        </div>
+        <div class="stats-box">
+            <div class="stat-item">
+                <span class="stat-label">Score</span>
+                <span id="score-val" class="stat-value">0</span>
+            </div>
+            <div class="stat-item">
+                <span class="stat-label">Served</span>
+                <span id="served-val" class="stat-value">0</span>
+            </div>
+        </div>
+    </header>
+
+    <div id="restaurant-view">
+        <div class="lanterns">
+            <div class="lantern"></div>
+            <div class="lantern"></div>
+            <div class="lantern"></div>
+        </div>
+
+        <div class="customer-area" id="customer-area">
+            <!-- Dynamic Customer Render -->
+        </div>
+    </div>
+
+    <div id="prep-view">
+        <div class="plate-area">
+            <div class="bamboo-steamer">
+                <div class="current-item-display" id="dish-display">
+                    Select Items To Cook
+                </div>
+            </div>
+        </div>
+
+        <div class="controls-container">
+            <div class="category-title">1. Choose Main Meal / Drink</div>
+            <div class="ingredients-grid">
+                <button class="btn-ingredient" onclick="addItem('Crispy Chicken Bao', '🥙')">
+                    <span class="icon">🥙</span>
+                    <span class="name">Chicken Bao</span>
+                </button>
+                <button class="btn-ingredient" onclick="addItem('BBQ Pork Bao', '🥟')">
+                    <span class="icon">🥟</span>
+                    <span class="name">Pork Bao</span>
+                </button>
+                <button class="btn-ingredient" onclick="addItem('Veggies Bao', '🥬')">
+                    <span class="icon">🥬</span>
+                    <span class="name">Veggie Bao</span>
+                </button>
+            </div>
+
+            <div class="category-title">2. Choose Sides / Extras</div>
+            <div class="ingredients-grid">
+                <button class="btn-ingredient" onclick="addItem('Boba Milk Tea', '🧋')">
+                    <span class="icon">🧋</span>
+                    <span class="name">Boba Tea</span>
+                </button>
+                <button class="btn-ingredient" onclick="addItem('Dim Sum', '🍱')">
+                    <span class="icon">🍱</span>
+                    <span class="name">Dim Sum</span>
+                </button>
+                <button class="btn-ingredient" onclick="addItem('Chili Sauce', '🌶️')">
+                    <span class="icon">🌶️</span>
+                    <span class="name">Chili Sauce</span>
+                </button>
+            </div>
+        </div>
+
+        <div class="action-buttons">
+            <button class="btn-action btn-clear" onclick="clearPlate()">Clear</button>
+            <button class="btn-action btn-serve" onclick="serveOrder()">Serve Order</button>
+        </div>
+    </div>
+
+    <div id="feedback" class="feedback"></div>
+</div>
+
+<script src="script.js"></script>
+</body>
+</html>
